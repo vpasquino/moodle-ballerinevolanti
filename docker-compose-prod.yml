@@ -2,7 +2,9 @@ version: "2"
 services:
   moodle:
     container_name: moodle_app
-    image: docker.io/bitnami/moodle:4.3
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "80:8080"
       - "443:8443"
