@@ -24,6 +24,7 @@ services:
       - MOODLE_DATABASE_PASSWORD=moodle
       - MOODLE_USERNAME=ballerinevolanti
       - MOODLE_PASSWORD=ballerinevolanti
+      - MOODLE_LANG=it
     volumes:
       - "moodle_data:/bitnami/moodle"
       - "moodledata_data:/bitnami/moodledata"
