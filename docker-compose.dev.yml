@@ -29,6 +29,7 @@ services:
       - MOODLE_PASSWORD=ballerinevolanti
       - MOODLE_LANG=it
     volumes:
+      # - ./theme/beatopaolo/:/bitnami/moodle/theme/beatopaolo/
       - "moodle_data:/bitnami/moodle"
       - "moodledata_data:/bitnami/moodledata"
     depends_on:

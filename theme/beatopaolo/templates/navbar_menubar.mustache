@@ -1,0 +1,33 @@
+{{#output.edit_switch}}
+  {{#nodecollection}}
+    {{#children}}
+      {{> theme_beatopaolo/navbar_menu}}
+    {{/children}}
+  {{/nodecollection}}
+  {{#nodearray}}
+    {{> theme_beatopaolo/navbar_menu}}
+  {{/nodearray}}
+{{/output.edit_switch}}
+
+{{#usermenu}}
+  {{#unauthenticateduser}}
+    {{#url}}
+      <z-menu slot="menu">
+        <a href="{{url}}">{{#str}} login, core {{/str}}</a>
+      </z-menu>
+    {{/url}}
+  {{/unauthenticateduser}}
+  {{^unauthenticateduser}}
+    <div slot="menu">
+      {{#usermenu}}
+          {{> core/user_menu }}
+      {{/usermenu}}
+    </div>
+  {{/unauthenticateduser}}
+{{/usermenu}}
+
+{{#output.edit_switch}}
+  <div slot="menu">
+    {{{ output.edit_switch }}}
+  </div>
+{{/output.edit_switch}}
